@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  #get 'posts/:id', to: 'posts#show' has been replaced with a resources method
+
+  resources :posts, only: :show # the "only" option selects which of the 7 restful routes we care about  "show" in this case
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
